@@ -18,9 +18,12 @@ repositories {
 
 sourceSets.main.java.srcDirs "src/main/generated-sources"
 sourceSets.main.resources.excludes = ['payment.xsd']
+compileJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
 
 dependencies {
-
     compileOnly "org.springframework.boot:spring-boot-devtools"
 
     implementation "org.springframework.boot:spring-boot-starter-undertow"
